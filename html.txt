@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gadgets Zone</title>
+    <link rel="stylesheet" href="Home.css">
+    <style>
+      .mySlides {display:none}
+      .w3-left, .w3-right, .w3-badge {cursor:pointer}
+      .w3-badge {height:13px;width:13px;padding:0}
+      .error {color: #FF0000;}
+    </style>
+    
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+      </script>
+</head>
+<body>
+  <div class="header">
+      <img style="float:left"src="logo.png"/>
+      <h1>GADGETS ZONE</h1>
+      <p></p>
+ </div>
+  <div class="topnav">
+    <a href="Home.html">HOME</a>
+    
+  </div>
+  <br/>
+  <div class="slides" style="max-width:800px">
+    <img class="mySlides" src="slideimage1.jpg" style="width:100%">
+    <img class="mySlides" src="slideimage2.jpg" style="width:100%">
+    <img class="mySlides" src="slideimage3.jpg" style="width:100%">
+    <img class="mySlides" src="slideimage4.jpg" style="width:100%">
+    <img class="mySlides" src="slideimage5.jpg" style="width:100%">
+    <img class="mySlides" src="slideimage6.jpg" style="width:100%">
+  </div>
+  <br/>
+
+  <script>
+    var myIndex = 0;
+    carousel();
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); 
+      }
+  </script>
+  <div class="footer">
+      <div class="link">
+          <p>Follow us on <a href="https://www.twitter.com"><img src="twitter.png" width="30px" height="30px"></a> <a href="https://www.facebook.com"><img src="fb.jpg" width="30px" height="30px"></a> <a href="https://www.gmail.com"><img src="gmail.jpg" width="30px" height="30px"></a> <a href="https://www.blogger.com"><img src="blog.jpg" width="30px" height="30px"></a></p>
+      </div>
+    <div>
+      <p>&copy; Gadgets Zone Web Private Limited 2018.All Rights Reserved.</p>
+    </div>
+  </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
+</body>
+</html>
